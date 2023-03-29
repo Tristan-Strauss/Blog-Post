@@ -46,6 +46,7 @@ app.get("/contact", function(req,res){
 app.post("/login", function(req,res){
   const username = req.body.username;
   const password = req.body.password;
+  // By Default these values are " admin:admin "
   if (username == process.env.ADMIN_USERNAME || password == process.env.ADMIN_PASSWORD){
     loggedIn = true;
     res.redirect("compose");
