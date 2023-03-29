@@ -1,0 +1,27 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p>This is where you will find all my posts!</p>
+
+<% postArray.forEach(function(post){ %>
+    <h1><%= post.title %></h1>
+    <p>
+
+
+        <% if (post.content.length > 100) { %>
+            <%= post.content.substring(0,100) + " . . ." %> 
+            <br>
+            <a href="/posts/<%= post._id %>">Read more</a>
+        <% } else { %>
+            <%= post.content %>
+            <br>
+            <a href="/posts/<%= post.id %>">Read more</a>
+        <% } %>
+
+
+        <!-- <%= post.content.substring(0,100) + " . . ." %> -->
+        <!-- <a href="/posts/<%= post._id %>">Read more</a> -->
+    </p>
+<% }); %>
+
+<%- include("partials/footer"); -%>
