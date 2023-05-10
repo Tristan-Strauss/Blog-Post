@@ -15,7 +15,7 @@ let loggedIn = false;
 
 const MongoAdminPassword = process.env.MONGO_ADMIN_PASSWORD;
 
-mongoose.connect("mongodb+srv://Admin:" + MongoAdminPassword + "@cluster0.yhtjpi4.mongodb.net/blogDB").then(function(){
+mongoose.connect("mongodb://localhost:27017/blogDB").then(function(){
   console.log("Connected to the database successfully");
 }).catch(function(err){
   console.log(err);
