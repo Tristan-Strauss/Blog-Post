@@ -16,7 +16,8 @@
 
 ## Issues
 
-- The Database only runs locally (need to run "mongod")
+- Required replacing of .env variables db to run locally
+- MongoDB required to be install locally
 
 
 
